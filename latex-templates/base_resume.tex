@@ -1,0 +1,135 @@
+%% ATS-Friendly LaTeX Resume Template
+%% Resume Tailor System — Placeholder markers for dynamic update
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+%% ─── HEADER COMMAND ────────────────────────────────────────────────────────
+%% \simpleheader{Name}{Role}{Email}{Phone}{Location}
+\newcommand{\simpleheader}[5]{%
+  {\LARGE\textbf{#1}} \hfill {\large #2} \\[2pt]
+  \href{mailto:#3}{#3} $\cdot$ #4 $\cdot$ #5
+  \vspace{4pt}
+}
+
+%% ─── EXPERIENCE ENTRY ───────────────────────────────────────────────────────
+%% \cvevent{Title}{Company}{Location}{Dates}
+\newcommand{\cvevent}[4]{%
+  \textbf{#1} \hfill \textit{#3 | #4} \\
+  \textit{#2}
+}
+
+%% ─── EDUCATION ENTRY ────────────────────────────────────────────────────────
+%% \cvdegree{Degree}{Institution}{Location}{Year}
+\newcommand{\cvdegree}[4]{%
+  \textbf{#1} \hfill \textit{#3 | #4} \\
+  \textit{#2}
+}
+
+%% ─── SKILL BAR ──────────────────────────────────────────────────────────────
+%% \barrule{Skill}{Percentage}
+\newcommand{\barrule}[2]{%
+  \textbf{#1}: #2\% \quad
+}
+
+%% ─── INFO BUBBLE ─────────────────────────────────────────────────────────────
+\newcommand{\infobubble}[2]{\textbf{#1}: #2 \quad}
+
+\begin{document}
+
+%% ───────────────────────────────────────────────────────────────────────────
+\simpleheader{Muhammad Muzammil}{AI Engineer}{muzammil@example.com}{+92-300-0000000}{Karachi, Pakistan}
+
+%% ───────────────────────────────────────────────────────────────────────────
+\section{Professional Summary}
+AI Engineer and Microsoft Student Ambassador with hands-on experience building
+production-ready NLP pipelines, agentic AI systems, and Power Platform automations.
+Proven ability to integrate LLMs into enterprise workflows using Azure AI Services,
+LangChain, and FastAPI. Passionate about delivering scalable, ATS-compliant solutions
+that create measurable business impact.
+
+%% ───────────────────────────────────────────────────────────────────────────
+\section{Technical Skills}
+% SKILLS_START
+\barrule{Python}{90}
+\barrule{Azure AI Services}{85}
+\barrule{LangChain}{80}
+\barrule{Power Platform}{85}
+\barrule{FastAPI}{80}
+\barrule{React}{75}
+\barrule{SQL}{80}
+\barrule{Docker}{70}
+% SKILLS_END
+
+%% ───────────────────────────────────────────────────────────────────────────
+\section{Professional Experience}
+
+\cvevent{AI Engineer Intern}{1Dynamics PTY LTD}{Remote (Australia)}{Jan 2025 -- Present}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Architected a Copilot Studio-based task management system integrated with SharePoint,
+        reducing manual task entry time by 60\%.
+  \item Debugged complex Power Automate flows handling ISO date formatting and SharePoint
+        field validation, resolving BadGateway errors and increasing flow reliability to 99\%.
+  \item Built RAG pipelines using Azure AI Search and GPT-4o for internal knowledge retrieval,
+        cutting support ticket resolution time by 35\%.
+  \item Designed agentic AI workflows processing 500+ records daily with zero data loss.
+\end{itemize}
+
+\vspace{4pt}
+\cvevent{Generative AI Fellow}{Buildable}{Remote}{Jun 2024 -- Sep 2024}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Developed and deployed 3 production LLM applications using LangChain and OpenAI APIs.
+  \item Built semantic search system achieving 92\% relevance accuracy on internal datasets.
+  \item Mentored 5 junior fellows on prompt engineering and vector database integration.
+\end{itemize}
+
+\vspace{4pt}
+\cvevent{Data Science Fellow}{Bytewise Limited}{Remote}{Jan 2024 -- May 2024}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Delivered end-to-end ML pipelines (EDA → model → deployment) for 4 real-world datasets.
+  \item Achieved 94\% accuracy on a sentiment analysis model deployed via FastAPI + Docker.
+\end{itemize}
+
+%% ───────────────────────────────────────────────────────────────────────────
+\section{Projects}
+
+\textbf{Resume Tailor Automation Tool} \hfill \textit{2025}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Built full-stack AI system (React + FastAPI + Claude API) that tailors LaTeX resumes
+        to job descriptions, achieving 85\%+ ATS keyword match rate.
+  \item Integrated spaCy NLP pipeline with sentence-transformers for semantic matching,
+        reducing tailoring time from 2 hours to under 2 minutes.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{SharePoint Daily Tasks Manager} \hfill \textit{2025}
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Designed Copilot Studio bot with Power Automate integration, processing 200+ tasks/day.
+  \item Implemented strict field validation (ISO 8601 dates, enum matching) cutting errors by 80\%.
+\end{itemize}
+
+%% ───────────────────────────────────────────────────────────────────────────
+\section{Education}
+
+\cvdegree{BS Artificial Intelligence}{Sindh Madressatul Islam University}{Karachi}{2021 -- 2025}
+
+%% ───────────────────────────────────────────────────────────────────────────
+\section{Certifications}
+
+\begin{itemize}[leftmargin=*,noitemsep]
+  \item Beta Microsoft Student Ambassador — Microsoft
+  \item Azure AI Fundamentals (AI-900) — Microsoft
+  \item Generative AI Fellowship Certificate — Buildable
+\end{itemize}
+
+\end{document}
