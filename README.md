@@ -242,5 +242,6 @@ az postgres flexible-server create \
 | UPLOAD_DIR         | Optional | Resume upload path (default: /tmp/...)  |
 | OUTPUT_DIR         | Optional | PDF output path (default: /tmp/...)     |
 | VITE_API_URL       | Frontend | Backend URL (default: http://localhost:8000) |
-#   P r o j e c t  
+#   P r o j e c t 
+ 
  
